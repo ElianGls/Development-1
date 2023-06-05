@@ -13,6 +13,19 @@ return new class extends Migration
     {
         Schema::create('personal_information', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained('users');
+            $table->enum('gender', ['Male', 'Female', 'Other']);
+            $table->date('birthday');
+            $table->string('curp', 255);
+            $table->enum('civil_status', ['Single', 'Married', 'Divorced', 'Widowed']);
+            $table->string('social_security', 255);
+            $table->string('country');
+            $table->string('city');
+            $table->string('neighborhood');
+            $table->string('address');
+            $table->string('zip', 24);
+            $table->string('phone', 255);
+            $table->string('email', 255);
             $table->timestamps();
         });
     }
