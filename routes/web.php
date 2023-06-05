@@ -7,6 +7,8 @@ use App\Http\Controllers\ScheduleController;
 use App\Http\Controllers\CampusController;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\ModalityController;
+use App\Http\Controllers\CareerController;
+
  
 Route::get('/', function () {
     return view('welcome');
@@ -62,4 +64,12 @@ Route::middleware(['auth', 'user-access:manager'])->group(function () {
     Route::get('/manager/home/modalities/show', [ModalityController::class, 'show'])->name('modalities.show');
     Route::get('/manager/home/modalities/edit', [ModalityController::class, 'edit'])->name('modalities.edit');
     Route::delete('/manager/home/modalities/destroy', [ModalityController::class, 'destroy'])->name('modalities.destroy');
+
+    //Careers routes
+    Route::get('/manager/home/careers/index', [CareerController::class, 'index'])->name('careers.index');
+    Route::get('/manager/home/careers/create', [CareerController::class, 'create'])->name('careers.create');
+    Route::post('/manager/home/careers/store', [CareerController::class, 'store'])->name('careers.store');
+    Route::get('/manager/home/careers/show', [CareerController::class, 'show'])->name('careers.show');
+    Route::get('/manager/home/careers/edit', [CareerController::class, 'edit'])->name('careers.edit');
+    Route::delete('/manager/home/careers/destroy', [CareerController::class, 'destroy'])->name('careers.destroy');
 });
