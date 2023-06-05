@@ -10,6 +10,7 @@ use App\Http\Controllers\ModalityController;
 use App\Http\Controllers\CareerController;
 use App\Http\Controllers\SemesterController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\PersonalInformationController;
 
  
 Route::get('/', function () {
@@ -90,4 +91,13 @@ Route::middleware(['auth', 'user-access:manager'])->group(function () {
      Route::get('/manager/home/users/show', [UserController::class, 'show'])->name('users.show');
      Route::get('/manager/home/users/edit', [UserController::class, 'edit'])->name('users.edit');
      Route::delete('/manager/home/users/destroy', [UserController::class, 'destroy'])->name('users.destroy');
+
+
+     //Personal Information routes
+    Route::get('/manager/home/personalinformations/index', [PersonalInformationController::class, 'index'])->name('personal-informations.index');
+    Route::get('/manager/home/personalinformations/create', [PersonalInformationController::class, 'create'])->name('personal-informations.create');
+    Route::post('/manager/home/personalinformations/store', [PersonalInformationController::class, 'store'])->name('personal-informations.store');
+    Route::get('/manager/home/personalinformations/show', [PersonalInformationController::class, 'show'])->name('personal-informations.show');
+    Route::get('/manager/home/personalinformations/edit', [PersonalInformationController::class, 'edit'])->name('personal-informations.edit');
+    Route::delete('/manager/home/personalinformations/destroy', [PersonalInformationController::class, 'destroy'])->name('personal-informations.destroy');
 });
