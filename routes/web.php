@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ScheduleController;
 use App\Http\Controllers\CampusController;
+use App\Http\Controllers\DepartmentController;
  
 Route::get('/', function () {
     return view('welcome');
@@ -44,4 +45,12 @@ Route::middleware(['auth', 'user-access:manager'])->group(function () {
     Route::get('/manager/home/campuses/show', [CampusController::class, 'show'])->name('campuses.show');
     Route::get('/manager/home/campuses/edit', [CampusController::class, 'edit'])->name('campuses.edit');
     Route::delete('/manager/home/campuses/destroy', [CampusController::class, 'destroy'])->name('campuses.destroy');
+
+    //Departments routes
+    Route::get('/manager/home/departments/index', [DepartmentController::class, 'index'])->name('departments.index');
+    Route::get('/manager/home/departments/create', [DepartmentController::class, 'create'])->name('departments.create');
+    Route::post('/manager/home/departments/store', [DepartmentController::class, 'store'])->name('departments.store');
+    Route::get('/manager/home/departments/show', [DepartmentController::class, 'show'])->name('departments.show');
+    Route::get('/manager/home/departments/edit', [DepartmentController::class, 'edit'])->name('departments.edit');
+    Route::delete('/manager/home/departments/destroy', [DepartmentController::class, 'destroy'])->name('departments.destroy');
 });
