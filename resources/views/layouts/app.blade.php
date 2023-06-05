@@ -58,7 +58,7 @@
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="">Alumnos</a></li>
                                 <li><a class="dropdown-item" href="">Docentes</a></li>
-                                <li><a class="dropdown-item" href="">Administrativos</a></li>
+                                <li><a class="dropdown-item" href="{{ route('administrators.index') }}">Administrativos</a></li>
                             </ul>
                     </li>
 
