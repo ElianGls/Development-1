@@ -31,6 +31,20 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
 
+
+                    <!-- Nav Item Dropdown Institución-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Institución</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Usuarios</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Horario</a></li>
+                                <li><a class="dropdown-item" href="#">Campus</a></li>
+                                <li><a class="dropdown-item" href="#">Departamento  </a></li>
+                            </ul>
+                    </li>
+
+
                     </ul>
 
                     <!-- Right Side Of Navbar -->
