@@ -42,6 +42,16 @@
                             </ul>
                     </li>
 
+                     <!-- Nav Item Dropdown Usuarios-->
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Miembros</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="">Usuarios</a></li>
+                                <li><a class="dropdown-item" href="">Informacion personal</a></li>
+                            </ul>
+                    </li>
+
+
                     <!-- Nav Item Dropdown Oferta educativa-->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Oferta Educativa</a>
