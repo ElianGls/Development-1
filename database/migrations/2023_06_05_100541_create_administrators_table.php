@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('administrators', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained('users');
+            $table->integer('num_administrators');
+            $table->unsignedBigInteger('id_departments')->index();
+            $table->foreign('id_departments')->references('id')->on('departments');
             $table->timestamps();
         });
     }
