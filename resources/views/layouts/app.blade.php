@@ -38,7 +38,7 @@
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Usuarios</a></li>
                                 <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Horario</a></li>
+                                <li><a class="dropdown-item" href="{{ route('schedules.index') }}">Horario</a></li>
                                 <li><a class="dropdown-item" href="#">Campus</a></li>
                                 <li><a class="dropdown-item" href="#">Departamento  </a></li>
                             </ul>
