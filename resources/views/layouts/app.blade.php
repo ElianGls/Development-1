@@ -40,7 +40,7 @@
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="{{ route('schedules.index') }}">Horario</a></li>
                                 <li><a class="dropdown-item" href="{{ route('campuses.index') }}">Campus</a></li>
-                                <li><a class="dropdown-item" href="#">Departamento  </a></li>
+                                <li><a class="dropdown-item" href="{{ route('departments.index') }}">Departamento  </a></li>
                             </ul>
                     </li>
 
