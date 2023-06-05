@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('departments', function (Blueprint $table) {
             $table->id();
+            $table->string('name_departments');
+            $table->unsignedBigInteger('id_campuses');
+            $table->foreign('id_campuses')->references('id')->on('campuses');
+            $table->string('description_departments', 255);
+            $table->string('email_departments');
             $table->timestamps();
         });
     }
