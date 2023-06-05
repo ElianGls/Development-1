@@ -11,6 +11,7 @@ use App\Http\Controllers\CareerController;
 use App\Http\Controllers\SemesterController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PersonalInformationController;
+use App\Http\Controllers\administratorController;
 
  
 Route::get('/', function () {
@@ -100,4 +101,13 @@ Route::middleware(['auth', 'user-access:manager'])->group(function () {
     Route::get('/manager/home/personalinformations/show', [PersonalInformationController::class, 'show'])->name('personal-informations.show');
     Route::get('/manager/home/personalinformations/edit', [PersonalInformationController::class, 'edit'])->name('personal-informations.edit');
     Route::delete('/manager/home/personalinformations/destroy', [PersonalInformationController::class, 'destroy'])->name('personal-informations.destroy');
+
+
+     //Administrators  routes
+     Route::get('/manager/home/administrators/index', [administratorController::class, 'index'])->name('administrators.index');
+     Route::get('/manager/home/administrators/create', [administratorController::class, 'create'])->name('administrators.create');
+     Route::post('/manager/home/administrators/store', [administratorController::class, 'store'])->name('administrators.store');
+     Route::get('/manager/home/administrators/show', [administratorController::class, 'show'])->name('administrators.show');
+     Route::get('/manager/home/administrators/edit', [administratorController::class, 'edit'])->name('administrators.edit');
+     Route::delete('/manager/home/administrators/destroy', [administratorController::class, 'destroy'])->name('administrators.destroy');
 });
