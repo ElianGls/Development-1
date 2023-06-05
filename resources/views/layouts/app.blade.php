@@ -52,6 +52,17 @@
                     </li>
 
 
+                    <!-- Nav Item Dropdown Actores-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Actores</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="">Alumnos</a></li>
+                                <li><a class="dropdown-item" href="">Docentes</a></li>
+                                <li><a class="dropdown-item" href="">Administrativos</a></li>
+                            </ul>
+                    </li>
+
+
                     <!-- Nav Item Dropdown Oferta educativa-->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Oferta Educativa</a>
