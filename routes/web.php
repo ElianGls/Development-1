@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
  
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ScheduleController;
  
 Route::get('/', function () {
     return view('welcome');
@@ -26,4 +27,12 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
 Route::middleware(['auth', 'user-access:manager'])->group(function () {
    
     Route::get('/manager/home', [HomeController::class, 'managerHome'])->name('manager.home');
+
+    //Schedules routes
+    Route::get('/manager/home/schedules/index', [ScheduleController::class, 'index'])->name('schedules.index');
+    Route::get('/manager/home/schedules/create', [ScheduleController::class, 'create'])->name('schedules.create');
+    Route::post('/manager/home/schedules/store', [ScheduleController::class, 'store'])->name('schedules.store');
+    Route::get('/manager/home/schedules/show', [ScheduleController::class, 'show'])->name('schedules.show');
+    Route::get('/manager/home/schedules/edit', [ScheduleController::class, 'edit'])->name('schedules.edit');
+    Route::delete('/manager/home/schedules/destroy', [ScheduleController::class, 'destroy'])->name('schedules.destroy');
 });
