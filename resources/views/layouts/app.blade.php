@@ -50,7 +50,7 @@
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="{{ route('modalities.index') }}">Modalidad</a></li>
                                 <li><a class="dropdown-item" href="{{ route('careers.index') }}">Ingenierias</a></li>
-                                <li><a class="dropdown-item" href="#">Semestres</a></li>
+                                <li><a class="dropdown-item" href="{{ route('semesters.index') }}">Semestres</a></li>
                             </ul>
                     </li>
 
