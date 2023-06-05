@@ -9,6 +9,7 @@ use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\ModalityController;
 use App\Http\Controllers\CareerController;
 use App\Http\Controllers\SemesterController;
+use App\Http\Controllers\UserController;
 
  
 Route::get('/', function () {
@@ -81,4 +82,12 @@ Route::middleware(['auth', 'user-access:manager'])->group(function () {
      Route::get('/manager/home/semesters/show', [SemesterController::class, 'show'])->name('semesters.show');
      Route::get('/manager/home/semesters/edit', [SemesterController::class, 'edit'])->name('semesters.edit');
      Route::delete('/manager/home/semesters/destroy', [SemesterController::class, 'destroy'])->name('semesters.destroy');
+
+     //Users routes
+     Route::get('/manager/home/users/index', [UserController::class, 'index'])->name('users.index');
+     Route::get('/manager/home/users/create', [UserController::class, 'create'])->name('users.create');
+     Route::post('/manager/home/users/store', [UserController::class, 'store'])->name('users.store');
+     Route::get('/manager/home/users/show', [UserController::class, 'show'])->name('users.show');
+     Route::get('/manager/home/users/edit', [UserController::class, 'edit'])->name('users.edit');
+     Route::delete('/manager/home/users/destroy', [UserController::class, 'destroy'])->name('users.destroy');
 });
