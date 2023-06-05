@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ScheduleController;
 use App\Http\Controllers\CampusController;
 use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\ModalityController;
  
 Route::get('/', function () {
     return view('welcome');
@@ -53,4 +54,12 @@ Route::middleware(['auth', 'user-access:manager'])->group(function () {
     Route::get('/manager/home/departments/show', [DepartmentController::class, 'show'])->name('departments.show');
     Route::get('/manager/home/departments/edit', [DepartmentController::class, 'edit'])->name('departments.edit');
     Route::delete('/manager/home/departments/destroy', [DepartmentController::class, 'destroy'])->name('departments.destroy');
+
+    //Modalities routes
+    Route::get('/manager/home/modalities/index', [ModalityController::class, 'index'])->name('modalities.index');
+    Route::get('/manager/home/modalities/create', [ModalityController::class, 'create'])->name('modalities.create');
+    Route::post('/manager/home/modalities/store', [ModalityController::class, 'store'])->name('modalities.store');
+    Route::get('/manager/home/modalities/show', [ModalityController::class, 'show'])->name('modalities.show');
+    Route::get('/manager/home/modalities/edit', [ModalityController::class, 'edit'])->name('modalities.edit');
+    Route::delete('/manager/home/modalities/destroy', [ModalityController::class, 'destroy'])->name('modalities.destroy');
 });
