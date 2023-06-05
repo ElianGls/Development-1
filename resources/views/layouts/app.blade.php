@@ -48,7 +48,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Oferta Educativa</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Modalidad</a></li>
+                                <li><a class="dropdown-item" href="{{ route('modalities.index') }}">Modalidad</a></li>
                                 <li><a class="dropdown-item" href="#">Ingenierias</a></li>
                                 <li><a class="dropdown-item" href="#">Semestres</a></li>
                             </ul>
