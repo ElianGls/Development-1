@@ -13,6 +13,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\PersonalInformationController;
 use App\Http\Controllers\AdministratorController;
 use App\Http\Controllers\CuestionController;
+use App\Http\Controllers\DocumentsController;
 
 
  
@@ -120,4 +121,12 @@ Route::middleware(['auth', 'user-access:manager'])->group(function () {
      Route::get('/manager/home/questions/show', [CuestionController::class, 'show'])->name('cuestions.show');
      Route::get('/manager/home/questions/edit', [CuestionController::class, 'edit'])->name('cuestions.edit');
      Route::delete('/manager/home/questions/destroy', [CuestionController::class, 'destroy'])->name('cuestions.destroy');
+
+     //Documents  routes
+     Route::get('/manager/home/documents/index', [DocumentsController::class, 'index'])->name('documents.index');
+     Route::get('/manager/home/documents/create', [DocumentsController::class, 'create'])->name('documents.create');
+     Route::post('/manager/home/documents/store', [DocumentsController::class, 'store'])->name('documents.store');
+     Route::get('/manager/home/documents/show', [DocumentsController::class, 'show'])->name('documents.show');
+     Route::get('/manager/home/documents/edit', [DocumentsController::class, 'edit'])->name('documents.edit');
+     Route::delete('/manager/home/documents/destroy', [DocumentsController::class, 'destroy'])->name('documents.destroy');
 });

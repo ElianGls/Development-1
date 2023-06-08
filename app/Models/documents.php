@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class documents extends Model
 {
     use HasFactory;
+
+    static $rules = [
+        'name' => 'required',
+        'path' => 'required',
+    ];
+
+    protected $fillable = ['name', 'path'];
 }

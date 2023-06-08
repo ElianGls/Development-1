@@ -77,6 +77,10 @@
                         <a class="nav-link active" aria-current="page" href="{{ route('questions.index') }}">Preguntas & Respuestas</a>
                     </li>
 
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ route('documents.index') }}">Documentos</a>
+                    </li>
+
 
                     </ul>
 
