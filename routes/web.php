@@ -11,7 +11,9 @@ use App\Http\Controllers\CareerController;
 use App\Http\Controllers\SemesterController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PersonalInformationController;
-use App\Http\Controllers\administratorController;
+use App\Http\Controllers\AdministratorController;
+use App\Http\Controllers\CuestionController;
+
 
  
 Route::get('/', function () {
@@ -110,4 +112,12 @@ Route::middleware(['auth', 'user-access:manager'])->group(function () {
      Route::get('/manager/home/administrators/show', [administratorController::class, 'show'])->name('administrators.show');
      Route::get('/manager/home/administrators/edit', [administratorController::class, 'edit'])->name('administrators.edit');
      Route::delete('/manager/home/administrators/destroy', [administratorController::class, 'destroy'])->name('administrators.destroy');
+
+     //Questions  routes
+     Route::get('/manager/home/questions/index', [CuestionController::class, 'index'])->name('questions.index');
+     Route::get('/manager/home/questions/create', [CuestionController::class, 'create'])->name('cuestions.create');
+     Route::post('/manager/home/questions/store', [CuestionController::class, 'store'])->name('cuestions.store');
+     Route::get('/manager/home/questions/show', [CuestionController::class, 'show'])->name('cuestions.show');
+     Route::get('/manager/home/questions/edit', [CuestionController::class, 'edit'])->name('cuestions.edit');
+     Route::delete('/manager/home/questions/destroy', [CuestionController::class, 'destroy'])->name('cuestions.destroy');
 });
