@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('periods', function (Blueprint $table) {
             $table->id();
+            $table->string('name_periods');
+            $table->string('horas');
+            $table->unsignedBigInteger('id_subjects');
+            $table->foreign('id_subjects')->references('id')->on('subjects');
+            $table->date('start_periods');
+            $table->date('end_periods');
             $table->timestamps();
         });
     }
