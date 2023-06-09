@@ -84,7 +84,19 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{{ route('periods.index') }}">Periodos</a>
                     </li>
+
+                    
+                    <!-- Nav Item Dropdown Oferta educativa-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Estudiante</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="">Servicio Social</a></li>
+                                <li><a class="dropdown-item" href="">Residencias Profesionales</a></li>
+                            </ul>
+                    </li>
                     </ul>
+
+
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
