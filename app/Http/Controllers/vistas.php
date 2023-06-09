@@ -43,7 +43,7 @@ class vistas extends Controller
      */
     public function edit()
     {
-        return view ('Estudiantes.redidenciaprofesinal');
+        return view ('Estudiantes.residenciaprofesional');
     }
 
     /**

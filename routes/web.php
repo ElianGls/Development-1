@@ -30,6 +30,11 @@ Auth::routes();
 Route::middleware(['auth', 'user-access:user'])->group(function () {
    
     Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+    
+    Route::get('/manager/home/ss/index', [vistas::class, 'index'])->name('vistasocial.index');
+    Route::get('/manager/home/rp/index', [vistas::class, 'edit'])->name('vistarecidencia.index');
+
 });
    
 //Admin Routes List
@@ -141,6 +146,5 @@ Route::middleware(['auth', 'user-access:manager'])->group(function () {
      Route::get('/manager/home/periods/edit', [PeriodController::class, 'edit'])->name('periods.edit');
      Route::delete('/manager/home/periods/destroy', [PeriodController::class, 'destroy'])->name('periods.destroy');
 
-     Route::get('/manager/home/sss/index', [vistas::class, 'index'])->name('vistasocial.index');
      
 });
