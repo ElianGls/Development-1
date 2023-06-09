@@ -1,0 +1,24 @@
+<div class="box box-info padding-1">
+    <div class="box-body">
+        
+        <div class="form-group">
+            {{ Form::label('user_id') }}
+            {{ Form::text('user_id', $relation->user_id, ['class' => 'form-control' . ($errors->has('user_id') ? ' is-invalid' : ''), 'placeholder' => 'User Id']) }}
+            {!! $errors->first('user_id', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
+        <div class="form-group">
+            {{ Form::label('period_id') }}
+            {{ Form::text('period_id', $relation->period_id, ['class' => 'form-control' . ($errors->has('period_id') ? ' is-invalid' : ''), 'placeholder' => 'Period Id']) }}
+            {!! $errors->first('period_id', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
+        <div class="form-group">
+            {{ Form::label('document_id') }}
+            {{ Form::text('document_id', $relation->document_id, ['class' => 'form-control' . ($errors->has('document_id') ? ' is-invalid' : ''), 'placeholder' => 'Document Id']) }}
+            {!! $errors->first('document_id', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
+
+    </div>
+    <div class="box-footer mt20">
+        <button type="submit" class="btn btn-primary">{{ __('Submit') }}</button>
+    </div>
+</div>
