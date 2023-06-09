@@ -11,11 +11,6 @@
             {{ Form::text('period_id', $relation->period_id, ['class' => 'form-control' . ($errors->has('period_id') ? ' is-invalid' : ''), 'placeholder' => 'Period Id']) }}
             {!! $errors->first('period_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
-        <div class="form-group">
-            {{ Form::label('document_id') }}
-            {{ Form::text('document_id', $relation->document_id, ['class' => 'form-control' . ($errors->has('document_id') ? ' is-invalid' : ''), 'placeholder' => 'Document Id']) }}
-            {!! $errors->first('document_id', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
 
     </div>
     <div class="box-footer mt20">

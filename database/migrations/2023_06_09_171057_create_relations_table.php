@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('relations', function (Blueprint $table) {
             $table->id();$table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('period_id');
-            $table->unsignedBigInteger('document_id');
             // Puedes agregar más columnas para los datos de la relación aquí
             
             // Relación con la tabla users
@@ -23,8 +22,6 @@ return new class extends Migration
             // Relación con la tabla periods
             $table->foreign('period_id')->references('id')->on('periods');
             
-            // Relación con la tabla documents
-            $table->foreign('document_id')->references('id')->on('documents');
             
             $table->timestamps();
         });
