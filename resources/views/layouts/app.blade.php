@@ -84,12 +84,6 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{{ route('periods.index') }}">Periodos</a>
                     </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{ route('relations.index') }}">Relaciones</a>
-                    </li>
-
-
                     </ul>
 
                     <!-- Right Side Of Navbar -->
