@@ -15,6 +15,7 @@ use App\Http\Controllers\AdministratorController;
 use App\Http\Controllers\CuestionController;
 use App\Http\Controllers\DocumentsController;
 use App\Http\Controllers\PeriodController;
+use App\Http\Controllers\vistas;
 
 
 
@@ -139,4 +140,7 @@ Route::middleware(['auth', 'user-access:manager'])->group(function () {
      Route::get('/manager/home/periods/show', [PeriodController::class, 'show'])->name('periods.show');
      Route::get('/manager/home/periods/edit', [PeriodController::class, 'edit'])->name('periods.edit');
      Route::delete('/manager/home/periods/destroy', [PeriodController::class, 'destroy'])->name('periods.destroy');
+
+     Route::get('/manager/home/sss/index', [vistas::class, 'index'])->name('vistasocial.index');
+     
 });
