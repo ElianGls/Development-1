@@ -149,10 +149,10 @@
                             <div class="p-1"></div>
 
                             <div class="d-flex justify-content-center mb-3">
-                                <a href="https://forms.gle/dJ4P8kwsCuhJhCSw8" target="_blank" class="btn btn-primary">
-                                    Subir Documentos
-                                </a>
-                            </div>
+                                
+                        
+                        
+                        </div>
                             <div class="p-1"></div>
                             <b>Notas:</b>
                             <ul>
@@ -174,7 +174,60 @@
                             integrar de forma física a tu expediente para cuando el
                             <b>Depto. de Servicio Social y Residencia Profesional</b> lo solicite.
                         </li>
+
+                        <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+    
+                <div class="card">
+                    <div class="card-body">
+                            <form method="POST" action="{{route('documents.store')}}" enctype="multipart/form-data">
+                                @csrf
+                                    
+                                    
+
+                                    <div class="row mb-3">
+                                        <label for="boleta" class="col-md-4 col-form-label text-md-end">{{ __('Carga de documentos') }}</label>
+                                    <div class="col-md-6">
+
+                                    <input class="form-control" type="file" name="boleta">
+        </div>
+    </div>
+
+                      <input type="hidden" value="{{Auth()->user()->id}}" name="modificado">
+                      <input type="hidden"  name="idal">
+
+                        <div class="row mb-0">
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    {{ __('Agregar archivos') }}
+                                </button>
+
+                                @php
+                                if(!empty($alumno->periodo->boleta)){
+                                $boleta = $alumno->periodo->boleta;
+
+                                }else{
+                                 $alergia ='Ninguna';
+                                }
+                                @endphp
+                              
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="card card-default">
+    
+
+
                     </ul>
+
+                                    
 
                     <p class="text-justify ">
                         <b class="text-danger">Aclaraciones:</b> Si tienes alguna duda, puedes mandar un mensaje al
@@ -204,9 +257,54 @@
                             <div class="p-1"></div>
 
                             <div class="d-flex justify-content-center mb-3">
-                                <a href="https://forms.gle/GVxZUSbZxQ4Z8wkx6" target="_blank" class="btn btn-primary">
-                                    Subir Documentos
-                                </a>
+                            <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+    
+                <div class="card">
+                    <div class="card-body">
+                            <form method="POST" action="{{route('documents.store')}}" enctype="multipart/form-data">
+                                @csrf
+                                    
+                                    
+
+                                    <div class="row mb-3">
+                                        <label for="boleta" class="col-md-4 col-form-label text-md-end">{{ __('Carga de documentos') }}</label>
+                                    <div class="col-md-6">
+
+                                    <input class="form-control" type="file" name="boleta">
+        </div>
+    </div>
+
+                      <input type="hidden" value="{{Auth()->user()->id}}" name="modificado">
+                      <input type="hidden"  name="idal">
+
+                        <div class="row mb-0">
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    {{ __('Agregar archivos') }}
+                                </button>
+
+                                @php
+                                if(!empty($alumno->periodo->boleta)){
+                                $boleta = $alumno->periodo->boleta;
+
+                                }else{
+                                 $alergia ='Ninguna';
+                                }
+                                @endphp
+                              
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="card card-default">
+    
                             </div>
                         </li>
                     </ul>
@@ -244,9 +342,54 @@
                             </ul>
                             <div class="p-1"></div>
                             <div class="d-flex justify-content-center mb-3">
-                                <a href="https://forms.gle/hgX6DcSPoAYnhfPn8" target="_blank" class="btn btn-primary">
-                                    Subir Documentos del Reporte 1
-                                </a>
+                            <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+    
+                <div class="card">
+                    <div class="card-body">
+                            <form method="POST" action="{{route('documents.store')}}" enctype="multipart/form-data">
+                                @csrf
+                                    
+                                    
+
+                                    <div class="row mb-3">
+                                        <label for="boleta" class="col-md-4 col-form-label text-md-end">{{ __('Carga de documentos') }}</label>
+                                    <div class="col-md-6">
+
+                                    <input class="form-control" type="file" name="boleta">
+        </div>
+    </div>
+
+                      <input type="hidden" value="{{Auth()->user()->id}}" name="modificado">
+                      <input type="hidden"  name="idal">
+
+                        <div class="row mb-0">
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    {{ __('Agregar archivos') }}
+                                </button>
+
+                                @php
+                                if(!empty($alumno->periodo->boleta)){
+                                $boleta = $alumno->periodo->boleta;
+
+                                }else{
+                                 $alergia ='Ninguna';
+                                }
+                                @endphp
+                              
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="card card-default">
+    
                             </div>
                         </li>
                     </ul>
@@ -284,9 +427,54 @@
                             </ul>
                             <div class="p-1"></div>
                             <div class="d-flex justify-content-center mb-3">
-                                <a href="https://forms.gle/HW6q3cgkmMzjsdPK7" target="_blank" class="btn btn-primary">
-                                    Subir Documentos del Reporte 2
-                                </a>
+                            <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+    
+                <div class="card">
+                    <div class="card-body">
+                            <form method="POST" action="{{route('documents.store')}}" enctype="multipart/form-data">
+                                @csrf
+                                    
+                                    
+
+                                    <div class="row mb-3">
+                                        <label for="boleta" class="col-md-4 col-form-label text-md-end">{{ __('Carga de documentos') }}</label>
+                                    <div class="col-md-6">
+
+                                    <input class="form-control" type="file" name="boleta">
+        </div>
+    </div>
+
+                      <input type="hidden" value="{{Auth()->user()->id}}" name="modificado">
+                      <input type="hidden"  name="idal">
+
+                        <div class="row mb-0">
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    {{ __('Agregar archivos') }}
+                                </button>
+
+                                @php
+                                if(!empty($alumno->periodo->boleta)){
+                                $boleta = $alumno->periodo->boleta;
+
+                                }else{
+                                 $alergia ='Ninguna';
+                                }
+                                @endphp
+                              
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="card card-default">
+    
                             </div>
                         </li>
                     </ul>
@@ -325,9 +513,54 @@
                             </ul>
                             <div class="p-1"></div>
                             <div class="d-flex justify-content-center mb-3">
-                                <a href="https://forms.gle/2sn4kX9q9YZnifoJA" target="_blank" class="btn btn-primary">
-                                    Subir Documentos del Reporte 3 y Reporte Final
-                                </a>
+                            <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+    
+                <div class="card">
+                    <div class="card-body">
+                            <form method="POST" action="{{route('documents.store')}}" enctype="multipart/form-data">
+                                @csrf
+                                    
+                                    
+
+                                    <div class="row mb-3">
+                                        <label for="boleta" class="col-md-4 col-form-label text-md-end">{{ __('Carga de documentos') }}</label>
+                                    <div class="col-md-6">
+
+                                    <input class="form-control" type="file" name="boleta">
+        </div>
+    </div>
+
+                      <input type="hidden" value="{{Auth()->user()->id}}" name="modificado">
+                      <input type="hidden"  name="idal">
+
+                        <div class="row mb-0">
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    {{ __('Agregar archivos') }}
+                                </button>
+
+                                @php
+                                if(!empty($alumno->periodo->boleta)){
+                                $boleta = $alumno->periodo->boleta;
+
+                                }else{
+                                 $alergia ='Ninguna';
+                                }
+                                @endphp
+                              
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="card card-default">
+    
                             </div>
                         </li>
                     </ul>
@@ -362,9 +595,7 @@
                             <b>7.2</b> Cuando hayas recibido tu carta de terminación, súbela a el siguiente enlace.
                             <div class="p-1"></div>
                             <div class="d-flex justify-content-center mb-1">
-                                <a href="https://forms.gle/Zsu3eeXp28LqrKeL8" target="_blank" class="btn btn-primary">
-                                    Subir carta de terminación
-                                </a>
+                                
                             </div>
                             <b>Nota</b>:
                             <ul>
@@ -374,6 +605,55 @@
                                     <b>23/06/2023</b>.
                                 </li>
                             </ul>
+
+                            <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+    
+                <div class="card">
+                    <div class="card-body">
+                            <form method="POST" action="{{route('documents.store')}}" enctype="multipart/form-data">
+                                @csrf
+                                    
+                                    
+
+                                    <div class="row mb-3">
+                                        <label for="boleta" class="col-md-4 col-form-label text-md-end">{{ __('Carga de documentos') }}</label>
+                                    <div class="col-md-6">
+
+                                    <input class="form-control" type="file" name="boleta">
+        </div>
+    </div>
+
+                      <input type="hidden" value="{{Auth()->user()->id}}" name="modificado">
+                      <input type="hidden"  name="idal">
+
+                        <div class="row mb-0">
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    {{ __('Agregar archivos') }}
+                                </button>
+
+                                @php
+                                if(!empty($alumno->periodo->boleta)){
+                                $boleta = $alumno->periodo->boleta;
+
+                                }else{
+                                 $alergia ='Ninguna';
+                                }
+                                @endphp
+                              
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="card card-default">
+    
                         </li>
                     </ul>
 
