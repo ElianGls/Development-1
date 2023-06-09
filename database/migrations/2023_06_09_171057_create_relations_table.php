@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('relations', function (Blueprint $table) {
-            $table->id();$table->unsignedBigInteger('user_id');
+            $table->id();
+            $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('period_id');
             // Puedes agregar más columnas para los datos de la relación aquí
             
