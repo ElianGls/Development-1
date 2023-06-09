@@ -81,6 +81,10 @@
                         <a class="nav-link active" aria-current="page" href="{{ route('documents.index') }}">Documentos</a>
                     </li>
 
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ route('periods.index') }}">Periodos</a>
+                    </li>
+
 
                     </ul>
 
