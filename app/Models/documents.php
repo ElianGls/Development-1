@@ -10,9 +10,10 @@ class documents extends Model
     use HasFactory;
 
     static $rules = [
+        'user_id' => 'required',
         'name' => 'required',
         'path' => 'required',
     ];
 
-    protected $fillable = ['name', 'path'];
+    protected $fillable = ['user_id', 'name', 'path'];
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\documents;
+use Auth;
 
 class DocumentsController extends Controller
 {
@@ -16,6 +17,8 @@ class DocumentsController extends Controller
 
     public function store(Request $request){
         $documento = new Documents();
+
+        $documento -> user_id = Auth::user()->id;
 
         if($request->hasFile('boleta')){
             $file =$request->file('boleta');
