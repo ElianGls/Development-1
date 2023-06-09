@@ -14,8 +14,7 @@ use App\Http\Controllers\PersonalInformationController;
 use App\Http\Controllers\AdministratorController;
 use App\Http\Controllers\CuestionController;
 use App\Http\Controllers\DocumentsController;
-use App\Http\Controllers\PeriodController;
-use App\Http\Controllers\RelationController;
+
 
 
  
@@ -139,13 +138,4 @@ Route::middleware(['auth', 'user-access:manager'])->group(function () {
      Route::get('/manager/home/periods/show', [PeriodController::class, 'show'])->name('periods.show');
      Route::get('/manager/home/periods/edit', [PeriodController::class, 'edit'])->name('periods.edit');
      Route::delete('/manager/home/periods/destroy', [PeriodController::class, 'destroy'])->name('periods.destroy');
-
-     //Periods routes
-     Route::get('/manager/home/relations/index', [RelationController::class, 'index'])->name('relations.index');
-     Route::get('/manager/home/relations/create', [RelationController::class, 'create'])->name('relations.create');
-     Route::post('/manager/home/relations/store', [RelationController::class, 'store'])->name('relations.store');
-     Route::get('/manager/home/relations/show', [RelationController::class, 'show'])->name('relations.show');
-     Route::get('/manager/home/relations/edit', [RelationController::class, 'edit'])->name('relations.edit');
-     Route::delete('/manager/home/relations/destroy', [RelationController::class, 'destroy'])->name('relations.destroy');
-     
 });
