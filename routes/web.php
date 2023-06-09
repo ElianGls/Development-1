@@ -14,6 +14,7 @@ use App\Http\Controllers\PersonalInformationController;
 use App\Http\Controllers\AdministratorController;
 use App\Http\Controllers\CuestionController;
 use App\Http\Controllers\DocumentsController;
+use App\Http\Controllers\PeriodController;
 
 
  
@@ -129,4 +130,13 @@ Route::middleware(['auth', 'user-access:manager'])->group(function () {
      Route::get('/manager/home/documents/show', [DocumentsController::class, 'show'])->name('documents.show');
      Route::get('/manager/home/documents/edit', [DocumentsController::class, 'edit'])->name('documents.edit');
      Route::delete('/manager/home/documents/destroy', [DocumentsController::class, 'destroy'])->name('documents.destroy');
+
+     //Periods routes
+     Route::get('/manager/home/periods/index', [PeriodController::class, 'index'])->name('periods.index');
+     Route::get('/manager/home/periods/create', [PeriodController::class, 'create'])->name('periods.create');
+     Route::post('/manager/home/periods/store', [PeriodController::class, 'store'])->name('periods.store');
+     Route::get('/manager/home/periods/show', [PeriodController::class, 'show'])->name('periods.show');
+     Route::get('/manager/home/periods/edit', [PeriodController::class, 'edit'])->name('periods.edit');
+     Route::delete('/manager/home/periods/destroy', [PeriodController::class, 'destroy'])->name('periods.destroy');
+     
 });
